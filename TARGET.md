@@ -18,7 +18,7 @@ access: huggingface
 hf_repo: openai/healthbench
 license: MIT
 difficulty: hard
-status: pending
+status: generated
 ```
 
 Comprehensive medical QA benchmark. Covers physician-level questions across 26 specialties.

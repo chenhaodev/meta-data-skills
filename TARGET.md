@@ -82,7 +82,7 @@ access: huggingface
 hf_repo: TsinghuaC3I/MedXpertQA
 license: CC-BY-4.0
 difficulty: hard
-status: pending
+status: generated
 ```
 
 Expert-level medical QA designed to challenge frontier models. Multimodal (text + images).

@@ -103,7 +103,7 @@ access: local
 local_file: 41746_2024_1010_MOESM9_ESM.xlsx
 license: research-only
 difficulty: medium
-status: pending
+status: generated
 ```
 
 Two human expert annotation sets for NEJM clinical cases.

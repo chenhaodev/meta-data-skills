@@ -60,7 +60,7 @@ access: local
 local_dir: MedBench_Agent/TEST/
 license: research-only
 difficulty: hard
-status: pending
+status: generated
 ```
 
 14 agentic medical subtasks: MedCOT, MedCallAPI, MedCollab, MedDBOps, MedDecomp,

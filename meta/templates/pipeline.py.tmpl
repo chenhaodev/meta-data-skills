@@ -1,0 +1,46 @@
+"""Data access layer for ${name} dataset."""
+# TODO: Add imports for access method (huggingface datasets, pandas, json)
+import pandas as pd
+from pathlib import Path
+
+DATA_DIR = Path(__file__).parent.parent.parent / "data" / "${slug}"
+
+
+def load_dataset(split: str = "test") -> pd.DataFrame:
+    """Load ${name} dataset.
+
+    Args:
+        split: Dataset split ('train', 'val', 'test').
+
+    Returns:
+        DataFrame with one row per example.
+
+    TODO: Implement one of:
+      - HuggingFace: datasets.load_dataset("<hf_repo>", split=split)
+      - Local xlsx:  pd.read_excel(DATA_DIR / "<file>.xlsx")
+      - Local jsonl: pd.DataFrame([json.loads(l) for l in open(DATA_DIR / "<task>.jsonl")])
+    """
+    raise NotImplementedError("TODO: implement load_dataset for ${name}")
+
+
+def sample(n: int, split: str = "test", seed: int = 42) -> pd.DataFrame:
+    """Sample n rows from the dataset reproducibly."""
+    df = load_dataset(split)
+    return df.sample(n=min(n, len(df)), random_state=seed).reset_index(drop=True)
+
+
+def format_item(item: dict) -> dict:
+    """Normalize a dataset row to the common med-data schema.
+
+    Returns:
+        dict with keys:
+          id       - unique string identifier
+          question - the question or prompt text
+          context  - background context (empty string if none)
+          choices  - list of answer choices for MCQ (empty list for open-ended)
+          answer   - ground truth answer string or MCQ index
+          metadata - dict with extra fields (source, difficulty, subtask, etc.)
+
+    TODO: Map ${name}-specific field names to this schema.
+    """
+    raise NotImplementedError("TODO: implement format_item for ${name}")

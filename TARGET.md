@@ -39,7 +39,7 @@ access: local
 local_file: Hospital@Home-db.clinic.xlsx
 license: research-only
 difficulty: medium
-status: pending
+status: generated
 ```
 
 574 real Hospital@Home patients with demographics, chronic conditions, medications, HRQoL.
